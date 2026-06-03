@@ -1,0 +1,19 @@
+.navbar{
+    background: #000;
+    color: white;
+    padding: 10px;
+}
+
+.navbarin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.function{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
