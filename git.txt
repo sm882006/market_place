@@ -1,0 +1,8 @@
+get code 
+git branch -M main
+git pull origin main
+
+push code 
+git add .
+git commit -m "updated project"
+git push
