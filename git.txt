@@ -3,6 +3,11 @@ git branch -M main
 git pull origin main
 
 push code 
+cd ..
 git add .
 git commit -m "updated project"
 git push
+
+run code 
+cd market_place
+npm run dev
