@@ -1,8 +1,10 @@
 import React from 'react'
 import './home.css'
-import Sign from './sign'
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="navbar">
             <div className="navbarin">
@@ -11,8 +13,9 @@ const Home = () => {
                     <div className="home">Home</div>
                     <div className="about">About</div>
                     <div className="contact">Contact Us</div>
-                    <div className="sign_in"><Sign/></div>
-
+                    <div className="sign_in">
+                        <button onClick={() => navigate('/sign')}>Sign In</button>
+                    </div>
                 </div>
             </div>
         </div>
