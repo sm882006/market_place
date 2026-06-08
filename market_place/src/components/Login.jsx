@@ -13,7 +13,7 @@ const Login = () => {
                         <input type="text" placeholder='Enter Your Username' className='field-input' />
                         <p className="ask">PASSWORD</p>
                         <input type="password" placeholder='Enter Your Password' className='field-input' />
-                        <div className="submit"><button>Submit</button></div>
+                        <button type='submit'>Log In</button>
                         <p className="not_login">Don't have account? <span>Sign up</span></p>
                     </div>
                 </form>
