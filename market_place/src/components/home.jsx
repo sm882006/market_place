@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="about">About</div>
                     <div className="contact">Contact Us</div>
                     <div className="sign_in">
-                        <button onClick={() => navigate('/sign')}>Sign In</button>
+                        <button onClick={() => navigate('/sign')}>Sign Up</button>
                     </div>
                     <div className="log_in">
                         <button onClick={() => navigate('/login')}>Log In</button>

@@ -73,7 +73,8 @@
 }
 
 .ask{
-    font-size: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
     padding-top: 20px;
     padding-bottom: 5px;
     color: rgba(40,80,90,0.55);
@@ -139,6 +140,31 @@
 
     text-align: center;
     font-size: 0.92rem;
+}
+
+.login-error {
+    color: #dc2626;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 8px 14px;
+    background: rgba(220, 38, 38, 0.08);
+    border: 1px solid rgba(220, 38, 38, 0.15);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    animation: shakeError 0.4s ease;
+}
+
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+.login_page button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
 }
 
 @media (max-width: 480px) {

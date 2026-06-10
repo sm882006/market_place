@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1781077082645",
+    "username": "utk",
+    "email": "utkarashmiraje@gmail.com",
+    "password": "$2b$10$2nT0ojNbNJElLQpppbDYt.a.PYCd.vvWi0kDS9MRoVG9Sq0CF0UZa",
+    "createdAt": "2026-06-10T07:38:02.645Z"
+  },
+  {
+    "id": "1781077291630",
+    "username": "ami",
+    "email": "amisha@gmail.com",
+    "password": "$2b$10$kHa8k7gfMAo1onStCeehreaMNj6nVf4xCc1bi9F9AJyaDYdzO01Yi",
+    "createdAt": "2026-06-10T07:41:31.630Z"
+  }
+]
