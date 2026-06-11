@@ -10,4 +10,5 @@ git push
 
 run code 
 cd market_place
+npm run server
 npm run dev
