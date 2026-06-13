@@ -13,6 +13,48 @@ const app = express();
 const PORT = 5000;
 const JWT_SECRET = 'market_pict_secret_key_2026';
 const USERS_FILE = join(__dirname, 'users.json');
+const PRODUCTS_FILE = join(__dirname, 'products.json');
+
+const INITIAL_PRODUCTS = [
+  {
+    id: "prod_1",
+    name: "Casio Scientific Calculator FX-991EX",
+    price: 750,
+    handleTime: "Immediate handover",
+    contact: "9876543210",
+    category: "Electronics & Gadgets",
+    description: "Casio fx-991EX ClassWiz scientific calculator, in perfect condition. Ideal for mathematics, statistics, and engineering courses. Used for 1 semester only.",
+    photo: "https://images.unsplash.com/photo-1629739835749-01f11c79f32e?q=80&w=400&auto=format&fit=crop",
+    seller: "ami",
+    createdAt: "2026-06-13T10:00:00.000Z"
+  },
+  {
+    id: "prod_2",
+    name: "Engineering Graphics Drawing Kit",
+    price: 450,
+    handleTime: "Within 24 hours",
+    contact: "9988776655",
+    category: "Lab & Drawing Kits",
+    description: "Mini drafter, roller scale, sheet container, and drawing board. Perfect for first-year engineering graphics course. No damage, drawing board is clean.",
+    photo: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=400&auto=format&fit=crop",
+    seller: "utk",
+    createdAt: "2026-06-13T10:10:00.000Z"
+  }
+];
+
+// Helper: read products from file
+function getProducts() {
+  if (!existsSync(PRODUCTS_FILE)) {
+    writeFileSync(PRODUCTS_FILE, JSON.stringify(INITIAL_PRODUCTS, null, 2));
+  }
+  const data = readFileSync(PRODUCTS_FILE, 'utf-8');
+  return JSON.parse(data);
+}
+
+// Helper: save products to file
+function saveProducts(products) {
+  writeFileSync(PRODUCTS_FILE, JSON.stringify(products, null, 2));
+}
 
 // Middleware
 app.use(cors());
@@ -185,6 +227,54 @@ app.get('/api/profile', authMiddleware, (req, res) => {
       createdAt: user.createdAt,
     },
   });
+});
+
+// GET /api/products
+app.get('/api/products', (req, res) => {
+  try {
+    const products = getProducts();
+    res.json(products);
+  } catch (error) {
+    console.error('Fetch products error:', error);
+    res.status(500).json({ message: 'Failed to retrieve products.' });
+  }
+});
+
+// POST /api/products (Protected)
+app.post('/api/products', authMiddleware, (req, res) => {
+  try {
+    const { name, price, handleTime, contact, category, description, photo } = req.body;
+
+    if (!name || !price || !contact || !category) {
+      return res.status(400).json({ message: 'Name, price, contact number, and category are required.' });
+    }
+
+    const products = getProducts();
+
+    const newProduct = {
+      id: Date.now().toString(),
+      name,
+      price: parseFloat(price),
+      handleTime: handleTime || 'Not specified',
+      contact,
+      category,
+      description: description || '',
+      photo: photo || '',
+      seller: req.user.username,
+      createdAt: new Date().toISOString(),
+    };
+
+    products.push(newProduct);
+    saveProducts(products);
+
+    res.status(201).json({
+      message: 'Product added successfully!',
+      product: newProduct
+    });
+  } catch (error) {
+    console.error('Add product error:', error);
+    res.status(500).json({ message: 'Failed to add product.' });
+  }
 });
 
 // Start server

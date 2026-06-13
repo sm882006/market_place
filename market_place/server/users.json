@@ -12,5 +12,12 @@
     "email": "amisha@gmail.com",
     "password": "$2b$10$kHa8k7gfMAo1onStCeehreaMNj6nVf4xCc1bi9F9AJyaDYdzO01Yi",
     "createdAt": "2026-06-10T07:41:31.630Z"
+  },
+  {
+    "id": "1781350631865",
+    "username": "testuser",
+    "email": "testuser@gmail.com",
+    "password": "$2b$10$3xXqfas83wA29ZE.yzZXNuGEuyCEfV00QqyPAbMHlc68mAgEmFYua",
+    "createdAt": "2026-06-13T11:37:11.865Z"
   }
 ]
