@@ -12,3 +12,5 @@ run code
 cd market_place
 npm run server
 npm run dev
+
+ npm run dev -- --host 0.0.0.0

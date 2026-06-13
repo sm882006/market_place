@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import './Profile.css';
+import './Profile.css'; 
 
 const Profile = () => {
   const { user, token, logout, isAuthenticated, loading } = useAuth();
@@ -111,6 +111,53 @@ const Profile = () => {
         <p className="profile-back" onClick={() => navigate('/')}>
           ← Back to Home
         </p>
+      </div>
+      {/* <div><button
+        type="button"
+        className="navbar__login"
+        onClick={() => {
+          navigate('/orderhome')
+        }}
+      >
+        order
+      </button></div> */}
+
+      <div className='rightpart'>
+        <div className='navprofile'>
+          <div><button
+        type="button"
+        className="navbar__login"
+        onClick={() => {
+          navigate('/orderhome')
+        }}
+      >
+        order
+      </button></div>
+
+      <div><button
+        type="button"
+        className="navbar__login"
+        onClick={() => {
+          navigate('/orderhome')
+        }}
+      >
+        order
+      </button></div>
+
+      <div><button
+        type="button"
+        className="navbar__login"
+        onClick={() => {
+          navigate('/orderhome')
+        }}
+      >
+        order
+      </button></div>
+        </div>
+        <div className='MainProfile'></div>
+
+
+
       </div>
     </div>
   );
