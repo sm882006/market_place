@@ -19,5 +19,12 @@
     "email": "testuser@gmail.com",
     "password": "$2b$10$3xXqfas83wA29ZE.yzZXNuGEuyCEfV00QqyPAbMHlc68mAgEmFYua",
     "createdAt": "2026-06-13T11:37:11.865Z"
+  },
+  {
+    "id": "1781436216013",
+    "username": "testuser_543",
+    "email": "testuser_543@example.com",
+    "password": "$2b$10$YedkGv1oprU2ICcMqCwTQOKfXktEBI1op0EQmP0Y6c18OEfzNkLDm",
+    "createdAt": "2026-06-14T11:23:36.013Z"
   }
 ]

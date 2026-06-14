@@ -112,53 +112,55 @@ const Profile = () => {
           ← Back to Home
         </p>
       </div>
-      {/* <div><button
-        type="button"
-        className="navbar__login"
-        onClick={() => {
-          navigate('/orderhome')
-        }}
-      >
-        order
-      </button></div> */}
 
-      <div className='rightpart'>
-        <div className='navprofile'>
-          <div><button
-        type="button"
-        className="navbar__login"
-        onClick={() => {
-          navigate('/orderhome')
-        }}
-      >
-        order
-      </button></div>
+      <div className="rightpart">
 
-      <div><button
-        type="button"
-        className="navbar__login"
-        onClick={() => {
-          navigate('/orderhome')
-        }}
-      >
-        order
-      </button></div>
+      <div className="options">
 
-      <div><button
-        type="button"
-        className="navbar__login"
-        onClick={() => {
-          navigate('/orderhome')
-        }}
-      >
-        order
-      </button></div>
-        </div>
-        <div className='MainProfile'></div>
+      <button className="option-btn"
+      onClick={() => navigate('/marketplace')}>
+        🛒 Buy / Sell Products
+      </button>
 
+  <button
+    className="option-btn"
+    onClick={() => navigate('/rent')}
+  >
+    🏠 Rent Marketplace
+  </button>
 
+  <button
+    className="option-btn"
+    onClick={() => navigate('/lostfound')}
+  >
+    🔍 Lost & Found
+  </button>
 
-      </div>
+</div>
+
+  {/* Activity Section */}
+  <div className="history">
+
+    <h2>Your Activity</h2>
+
+    <div className="history-item">
+      <span>🛒 Bought</span>
+      <p>Laptop</p>
+    </div>
+
+    <div className="history-item">
+      <span>📦 Sold</span>
+      <p>Scientific Calculator</p>
+    </div>
+
+    <div className="history-item">
+      <span>🔍 Lost & Found</span>
+      <p>Posted Lost ID Card</p>
+    </div>
+
+  </div>
+
+</div>
     </div>
   );
 };

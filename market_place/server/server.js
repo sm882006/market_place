@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const PORT = 5000;
+const PORT = 5001;
 const JWT_SECRET = 'market_pict_secret_key_2026';
 const USERS_FILE = join(__dirname, 'users.json');
 const PRODUCTS_FILE = join(__dirname, 'products.json');
