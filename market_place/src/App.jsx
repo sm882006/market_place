@@ -5,6 +5,8 @@ import Sign from './components/Sign'
 import Login from './components/Login'
 import Profile from './components/Profile'
 import Orderhome from "./order/Orderhome";
+import BuySell from "./components/BuySell";
+import SellItem from './components/SellItem';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Route path="/sign" element={<Sign />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/marketplace" element={<BuySell />} />
+      <Route path="/sell-item" element={<SellItem />} />
     </Routes>
   )
 }

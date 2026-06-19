@@ -141,22 +141,50 @@ const Profile = () => {
   {/* Activity Section */}
   <div className="history">
 
-    <h2>Your Activity</h2>
-
     <div className="history-item">
-      <span>🛒 Bought</span>
-      <p>Laptop</p>
-    </div>
 
-    <div className="history-item">
-      <span>📦 Sold</span>
-      <p>Scientific Calculator</p>
-    </div>
+  <img
+    src="https://via.placeholder.com/80"
+    alt="Laptop"
+    className="history-image"
+  />
 
-    <div className="history-item">
-      <span>🔍 Lost & Found</span>
-      <p>Posted Lost ID Card</p>
-    </div>
+  <div className="history-info">
+    <h4>Laptop</h4>
+    <p>🛒 Bought</p>
+  </div>
+
+</div>
+
+<div className="history-item">
+
+  <img
+    src="https://via.placeholder.com/80"
+    alt="Calculator"
+    className="history-image"
+  />
+
+  <div className="history-info">
+    <h4>Scientific Calculator</h4>
+    <p>📦 Sold</p>
+  </div>
+
+</div>
+
+<div className="history-item">
+
+  <img
+    src="https://web.whatsapp.com/fef975fa-53b9-4245-8183-1905b687482b"
+    alt="ID Card"
+    className="history-image"
+  />
+
+  <div className="history-info">
+    <h4>ID Card</h4>
+    <p>🔍 Lost & Found</p>
+  </div>
+
+</div>
 
   </div>
 

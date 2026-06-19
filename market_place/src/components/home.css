@@ -1025,3 +1025,6 @@
         display: none; /* Hide interactive graphic on very small screens to fit text */
     }
 }
+*{
+    font-family: 'Poppins', sans-serif;
+}
