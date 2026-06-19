@@ -174,10 +174,10 @@ const Profile = () => {
 <div className="history-item">
 
   <img
-    src="https://web.whatsapp.com/fef975fa-53b9-4245-8183-1905b687482b"
-    alt="ID Card"
-    className="history-image"
-  />
+  src="https://via.placeholder.com/80"
+  alt="ID Card"
+  className="history-image"
+/>
 
   <div className="history-info">
     <h4>ID Card</h4>

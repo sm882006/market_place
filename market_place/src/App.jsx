@@ -7,6 +7,8 @@ import Profile from './components/Profile'
 import Orderhome from "./order/Orderhome";
 import BuySell from "./components/BuySell";
 import SellItem from './components/SellItem';
+import Rent from './components/Rent';
+import RentItem from './components/RentItem';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/marketplace" element={<BuySell />} />
       <Route path="/sell-item" element={<SellItem />} />
+      <Route path="/rent" element={<Rent />} />
+      <Route path="/rent-item" element={<RentItem />} />
     </Routes>
   )
 }
