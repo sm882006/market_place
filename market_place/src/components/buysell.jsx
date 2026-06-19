@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import './buysell.css';
 
 const BuySell = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="marketplace">
 
