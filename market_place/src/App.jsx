@@ -9,6 +9,8 @@ import BuySell from "./components/BuySell";
 import SellItem from './components/SellItem';
 import Rent from './components/Rent';
 import RentItem from './components/RentItem';
+import LostFound from './components/LostFound';
+import LostFoundItem from './components/LostFoundItem';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Route path="/sell-item" element={<SellItem />} />
       <Route path="/rent" element={<Rent />} />
       <Route path="/rent-item" element={<RentItem />} />
+      <Route path="/lostfound" element={<LostFound />} />
+      <Route path="/lostfound-item" element={<LostFoundItem />} />
     </Routes>
   )
 }
