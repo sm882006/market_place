@@ -210,10 +210,12 @@
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
 }
 
-/* ─── Quick Action Buttons ─── */
+/* ════════════════════════════════════════════════
+   QUICK ACTION BUTTONS (3 buttons on top)
+   ════════════════════════════════════════════════ */
 .options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -250,7 +252,9 @@
     transform: translateY(0);
 }
 
-/* ─── Activity History ─── */
+/* ════════════════════════════════════════════════
+   ACTIVITY HISTORY (directly below the 3 buttons)
+   ════════════════════════════════════════════════ */
 .history {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(12px);
@@ -317,7 +321,9 @@
     color: rgba(26, 74, 85, 0.6);
 }
 
-/* ─── Responsive ─── */
+/* ════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
     .profile-page {
         flex-direction: column;
