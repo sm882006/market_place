@@ -10,7 +10,7 @@ import SellItem from './components/SellItem';
 import Rent from './components/Rent';
 import RentItem from './components/RentItem';
 import LostFound from './components/LostFound';
-import LostFoundItem from './components/LostFindItem';
+import LostFoundItem from './components/LostFoundItem';
 
 function App() {
   return (
